@@ -1,7 +1,6 @@
-// Instruction.jsx
-
 import React from 'react';
-import '../app/faq/styles.css';
+import '../app/globals.css';
+
 
 const Instruction = () => {
   return (
@@ -40,8 +39,8 @@ const Instruction = () => {
       fontWeight: 'bold',
       textAlign: 'center',
       margin: '0',
-      position: 'relative', // Ensure the text is positioned relative to the parent
-      zIndex: 1, // Bring the text to the front
+      position: 'relative',
+      zIndex: 1, 
       color: 'rgba(120, 48, 46, 1)',
     }}
   >

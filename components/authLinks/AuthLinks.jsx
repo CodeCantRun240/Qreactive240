@@ -17,6 +17,7 @@ const AuthLinks = () => {
             title='Login'
             icon='/user.svg'
             variant='btn_dark_green'
+            style={{height: '10px'}}
             />
         </Link>
         </div>

@@ -1,5 +1,7 @@
 import React from 'react';
-import '../app/faq/styles.css';
+import '../app/globals.css';
+
+
 const Hero = () => {
   return (
     <section className='flex-col flexCenter overflow-hidden py-24 '>
