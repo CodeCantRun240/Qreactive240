@@ -1,9 +1,13 @@
+"use client"
 import { NAV_LINKS } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
 import AuthLinks from '@/components/authLinks/AuthLinks'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
+    
   return (
     <nav className=" flexBetween 
     max-container padding-container relative z-30 py-5">

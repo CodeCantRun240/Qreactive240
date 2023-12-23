@@ -11,6 +11,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background:  black;
   color: hsl(209, 61%, 16%);
+  
+  width: auto;
+  overflow-y: auto;
+  height: 100px;
  
 }
 
@@ -180,6 +184,9 @@ body {
         display: flex;
         width: 100%;
         justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-evenly;
     }
     
     .Rectangle {
@@ -188,11 +195,23 @@ body {
         height: 250px;
         background-color: #2D2D2D;
         margin-top: 60px;
-        
         border-radius: 15px;
         text-align: center;
+    }
+    @media (max-width: 700px) {
+      .Container {
+        flex-direction: column
         
-    
+      }
+      .resize {
+        font-size: 10px;
+      }
+
+      .heroContainer img{
+        width: 0px;
+        height: 0px;
+        
+      }
     }
     
     .Rectangle2 {
@@ -200,7 +219,7 @@ body {
         height: 18%;
         background-color: #414141;
         border-radius: 10px;
-       
+        
         justify-content: center;
         display: flex;
         margin: 160px auto 0;
@@ -255,13 +274,16 @@ body {
         height: 104px;
         margin-left: 80px; 
         background: #414141;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+
         border-radius: 10px;
-        color: white;
-        border: none;
+        
+       
+        
         cursor: pointer;
         margin-top: 50px;
         text-align: left;
+        flex-wrap: wrap;
+       
     }
 
     .button img {
@@ -270,25 +292,26 @@ body {
     }
 
     .buttonContainer {
+        margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
+        margin-right: 70px;
       }
 
       .button:hover {
-        background: #555555; /* Change color on hover */
+        background: #555555; 
       }
       
       .button:active {
-        transform: scale(0.95); /* Add a slight scale effect on click */
+        transform: scale(0.95); 
       }
 
       .button span {
         font-size: 24px; 
        
-        margin-left: 22px; ;
-        margin-top  : 37px; /* Add margin to the right */
-        
+        margin-left: 22px; 
+        margin-top  : 37px; 
       }
 
       .showmore {
@@ -307,7 +330,7 @@ body {
       }
 
       .nextStepButton {
-        /* Rectangle 10 */
+     
         margin-top: 100px;
         position: absolute;
         width: 396px;
@@ -344,13 +367,24 @@ body {
         border: 20px solid #78302E;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
-    .Container {
-      align-items: center;
-      text-align: center;
-      display: flex;
-      width: 100%;
-      justify-content: space-around;
-  }
+      
+        .navbar
+        {
+          font-size: 15px;
+          margin-right: 10px;
+        }
+  
+        .container {
+          align-items: center;
+          text-align: center;
+          display: flex;
+          width: 100%;
+          justify-content: space-around;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-content: space-evenly;
+      }
+      
   
   .Rectangle {
       display: block;
@@ -370,12 +404,16 @@ body {
       height: 18%;
       background-color: #414141;
       border-radius: 10px;
-     
       justify-content: center;
       display: flex;
-      margin: 160px auto 0;
+      margin: 30px auto 0;
       font-weight: bold;
-      
+  }
+
+  .Rectangle img {
+    width: 100px;
+    height: 100px;
+    margin: 30px auto 0;
   }
   
   .rec2text{
@@ -383,7 +421,7 @@ body {
       margin-top: 10px;
       text-align: center;
       font-weight: bold;
-    color: #B3B3B3;}
+      color: #B3B3B3;}
   
   .rectext {
       font-size: 20px;
@@ -520,4 +558,6 @@ body {
       font-size: 15px;
       margin-right: 10px;
     }
+
+    
 
