@@ -1,5 +1,5 @@
 import React from 'react';
-import '../app/globals.css';
+import '../app/module.css';
 import '../app/faq/styles.css';
 
 const Selection = () => {
