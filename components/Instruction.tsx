@@ -1,6 +1,5 @@
 import React from 'react';
-import '../app/module.css';
-
+import home from '../app/home.module.css';
 
 const Instruction = () => {
   return (
@@ -45,38 +44,35 @@ const Instruction = () => {
       color: 'rgba(120, 48, 46, 1)',
       flexWrap: 'wrap'
     }}
-    
-   
-    
   >
     Create QR code in 3 steps
   </p>
 </div>
-      <div className="Container">
-        <div className="Rectangle">
+      <div className={home.Container}>
+        <div className={home.Rectangle}>
           <img src="choose.png" alt="Choose" />
-            <div className="Rectangle2">
-              <p className = "rec2text">Step 1:</p>
+            <div className={home.Rectangle2}>
+              <p className = {home.rec2text}>Step 1:</p>
             </div>
-            <p className = "rectext">Choose the type</p>
+            <p className = {home.rectext}>Choose the type</p>
         </div>
 
       
-        <div className="Rectangle">
+        <div className={home.Rectangle}>
           <img src="generate.png" alt="Generate" />
-            <div className="Rectangle2">
-              <p className = "rec2text">Step 2:</p>
+            <div className={home.Rectangle2}>
+              <p className = {home.rec2text}>Step 2:</p>
             </div>
-            <p className = "rectext">Generate QR code</p>
+            <p className = {home.rectext}>Generate QR code</p>
         </div>
 
        
-        <div className="Rectangle">
+        <div className={home.Rectangle}>
           <img src="download.png" alt="Save" />
-            <div className="Rectangle2"> 
-              <p className = "rec2text">Step 3:</p>
+            <div className={home.Rectangle2}> 
+              <p className = {home.rec2text}>Step 3:</p>
             </div>
-            <p className = "rectext">Customize and download</p>
+            <p className = {home.rectext}>Customize and download</p>
         </div>
       </div>
     </section>

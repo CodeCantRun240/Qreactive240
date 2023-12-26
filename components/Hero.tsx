@@ -1,5 +1,5 @@
 import React from 'react';
-import '../app/module.css';
+import '../app/home.module.css';
 
 
 const Hero = () => {

@@ -1,18 +1,6 @@
-body {
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background:  black;
-    color: hsl(209, 61%, 16%);
-    
-    width: auto;
-    overflow-y: auto;
-    height: 100px;
-   
-  }
 
-  .Container {
+
+.Container {
     align-items: center;
     text-align: center;
     display: flex;
@@ -82,6 +70,7 @@ body {
     height: 270px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -106,17 +95,13 @@ body {
     display: flex;
     width: 273px;
     height: 104px;
-    margin-left: 80px; 
+    
     background: #414141;
-
     border-radius: 10px;
-    
-   
-    
     cursor: pointer;
     margin-top: 50px;
     text-align: left;
-    flex-wrap: wrap;
+    
    
 }
 
@@ -128,9 +113,9 @@ body {
 .buttonContainer {
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     margin-right: 70px;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .button:hover {
