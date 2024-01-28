@@ -3,24 +3,22 @@ const linkQR = require('../models/linkQR');
 const textQR = require('../models/textQR');
 const Session = require('../models/Session');
 const personalDataQR = require('../models/personalDataQR');
+const users = require('../models/users');
 const jwt = require('jsonwebtoken');
 
+const showList = (req, res) => {
+    res.render('qrList');
+};
 const listQRCodes = async (req, res) => {
     try {
-         // Access the token from the session or Session schema
-        const session = await Session.findOne({sessionToken: 'some-session-token'});
-        const jwtToken = session.jwtToken;
+        console.log(req.body.email);
+        const user = await users.findOne({ email: req.body.email });
         
-        if (!jwtToken) {
-            return res.status(401).send('Access Denied');
-        }
-        // Verify the token
-        const verified = await jwt.verify(jwtToken, process.env.TOKEN_SECRET);
-        decoded = jwt.decode(jwtToken, { complete: true });
-        const currentAccount = decoded.payload.id;
-        
+        console.log(user);
+        const currentAccount = user.email;
+        console.log(currentAccount);
         if (!currentAccount) {
-            return res.status(401).send('Unauthorized');
+            return res.status(401).send('Unauthor');
         }
         
         
@@ -47,5 +45,6 @@ const listQRCodes = async (req, res) => {
 };
 
 module.exports = {
+    showList,
     listQRCodes,
 };

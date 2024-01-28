@@ -2,8 +2,10 @@ const qr = require('qrcode');
 const mongoose = require('mongoose');
 const LinkQR = require('../models/linkQR');
 const Session = require('../models/Session');
+const users = require('../models/users');
 const jwt = require('jsonwebtoken');
 const {authenticateUser} = require('../controllers/authenticationController');
+
 // Define Link QR controller methodss
 const showLinkQRGeneration = (req, res) => {
     res.render('qr_link');
@@ -11,19 +13,19 @@ const showLinkQRGeneration = (req, res) => {
 const generateLinkQR = async (req, res) => {
     try {
         // Access the token from the session or Session schema
-        const session = await Session.findOne({ sessionToken: 'some-session-token' });
-        const jwtToken = session.jwtToken;
-        console.log(jwtToken);
-        if (!jwtToken) {
-            return res.status(401).send('Access Denied');
+        // Access the token from the session or Session schema
+        var currentAccount;
+        const user = await users.findOne({ email: req.body.email });
+        
+        if (!user) {
+            currentAccount = "none";
         }
-        try{                                                        //author : Koha
-            // Verify the token
-            const verified = await jwt.verify(jwtToken, process.env.TOKEN_SECRET);
-            decoded = jwt.decode(jwtToken, { complete: true });
-            const currentAccount = decoded.payload.id;
-            if (currentAccount) {
-        const { link } = req.body;
+        else {
+        currentAccount = user.email;
+        
+        }
+        
+        const  link  = req.body.qrLink;
         
         // Save the form data to the MongoDB database
         const linkQRData = new LinkQR({
@@ -43,15 +45,6 @@ const generateLinkQR = async (req, res) => {
 
         // Send the QR code image URL to the client
         res.json({ qrImageUrl: qrCodeDataUrl });
-    }
-    else {
-        res.status(401).send('Unauthorized');
-    }
-}
-catch(err){
-    console.error(err);
-    res.status(500).send('Internal Server Error');
-}
         
     } catch (err) {
         console.error(err);

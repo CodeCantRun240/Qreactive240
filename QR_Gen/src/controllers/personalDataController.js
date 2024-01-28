@@ -1,10 +1,8 @@
 require('dotenv').config();
 const personalDataQR = require('../models/personalDataQR');
-const Session = require('../models/Session');
 const qr = require('qrcode');
 const mongoose = require('mongoose');
-const ObjectId = mongoose.Types.ObjectId;
-const jwt = require('jsonwebtoken');
+const users = require('../models/users');
 
 const scanPersonalDataQR = async (req, res) => {
     try {
@@ -24,13 +22,13 @@ const GeneratePersonalDataQR = async (req, res) => {
     try {
         var currentAccount;
         // Get the token from the cookie
-        const token = await Session.findOne({ sessionToken: 'some-session-token' });
-        console.log("token"+token);
-        if (!token) {
+        const user = await users.findOne({ email: req.body.email });
+        
+        if (!user) {
             currentAccount = "none";
         }
         else {
-        currentAccount = token.userId;
+        currentAccount = user.email;
         console.log("currentAccount"+currentAccount);
         }
             // Get the form data
