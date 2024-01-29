@@ -34,6 +34,11 @@ export default function RootLayout({
               </div>
             </div>
             <Footer />
+            <div className="h-full  mt-0">
+              <div className="w-screen">
+               
+              </div>
+            </div>
 
           </Providers>
         </main>
