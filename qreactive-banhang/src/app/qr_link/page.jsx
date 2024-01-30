@@ -105,7 +105,7 @@ const QRLinkGenerator = () => {
                     </button>
 
                 </div>
-                <div className="w-3/4 border-0 border-r-4 flex flex-col items-center bg-white mt-4	">
+                <div className="w-3/4 border-0 border-r-4 flex flex-col items-center bg-#3B3B3B; mt-4	">
                     <div className={styles.input_group}>
                         <input
                             type="text"

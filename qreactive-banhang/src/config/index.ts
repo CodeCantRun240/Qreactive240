@@ -1,26 +1,5 @@
 export const PRODUCT_CATEGORIES = [
   {
-    label: 'UI Kits',
-    value: 'ui_kits' as const,
-    featured: [
-      {
-        name: 'Editor picks',
-        href: `/products?category=ui_kits`,
-        imageSrc: '/nav/ui-kits/mixed.jpg',
-      },
-      {
-        name: 'New Arrivals',
-        href: '/products?category=ui_kits&sort=desc',
-        imageSrc: '/nav/ui-kits/blue.jpg',
-      },
-      {
-        name: 'Bestsellers',
-        href: '/products?category=ui_kits',
-        imageSrc: '/nav/ui-kits/purple.jpg',
-      },
-    ],
-  },
-  {
     label: 'Icons',
     value: 'icons' as const,
     featured: [
@@ -45,10 +24,9 @@ export const PRODUCT_CATEGORIES = [
 // NAVIGATION
 export const NAV_LINKS = [
   { href: '/', key: 'home', label: 'Home' },
-  { href: '/user-page', key: 'why_qreactive', label: 'Why Qreactive?' },
-  { href: '/qr_scanner', key: 'qr_scanner', label: 'Qr Scanner' },
+  { href: '/whyqr', key: 'why_qreactive', label: 'Why Qreactive?' },
+  { href: '/qr_scanner', key: 'qr_scanner', label: 'Create Qr Code' },
   { href: '/faq', key: 'faq ', label: 'FAQ ' },
-  { href: '/qr_list', key: 'contact_us', label: 'Contact Us' },
 ];
 
 // CAMP SECTION

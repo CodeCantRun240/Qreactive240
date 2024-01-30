@@ -27,7 +27,7 @@ const UserAccountNav = ({ user }: { user: User }) => {
         asChild
         className='overflow-visible'>
         <Button
-          variant='ghost'
+          variant='link'
           size='sm'
           className='relative text-white rounded-xl bg-blue-400 mr-24'>
           My account
@@ -47,17 +47,19 @@ const UserAccountNav = ({ user }: { user: User }) => {
 
         <DropdownMenuSeparator />
 
+        
+
         <DropdownMenuItem asChild >
-          <Link href={`qr_list`} className='cursor-pointer'>
-          QR List
+          <Link href={`/profile/${user.id}`} className='cursor-pointer'>
+          Profile
           </Link>
          
          
         </DropdownMenuItem>
 
         <DropdownMenuItem asChild >
-          <Link href={`/profile/${user.id}`} className='cursor-pointer'>
-          Profile
+          <Link href={`/qr_list`} className='cursor-pointer'>
+          QR List
           </Link>
          
          

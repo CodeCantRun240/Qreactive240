@@ -115,7 +115,7 @@ const QRPersonalGenerator = () => {
                         Email
                     </button>
                 </div>
-                <div className="w-3/4 border-0 border-r-4 flex flex-col items-center bg-white border-b-2 mt-4	">
+                <div className="w-3/4 border-0 border-r-4 flex flex-col items-center bg-#3B3B3B; border-b-2 mt-4	">
 
                     <div className={styles.input_group}>
                         <input
@@ -190,7 +190,7 @@ const QRPersonalGenerator = () => {
 
                     <div className={styles.input_date}>
                         <input
-                            type="date"
+                            type="text"
                             className={styles.input}
                             id="Position"
                             value={Position}
@@ -198,7 +198,7 @@ const QRPersonalGenerator = () => {
                             required
                         />
                         <label htmlFor="Position" className={styles.user_date}>
-                            Date of birth
+                            Position
                         </label>
                     </div>
 
