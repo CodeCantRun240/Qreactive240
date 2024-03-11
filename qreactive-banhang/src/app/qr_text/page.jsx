@@ -10,6 +10,7 @@ import { getEmailUser } from '@/components/emailuser';
 const QRLinkGenerator = () => {
     const [qrText, setQrText] = useState("");
     const [qrImageUrl, setQrImageUrl] = useState("");
+    const [QR_Name, setQR_Name] = useState("");
 
     // Router instance
     const router = useRouter();
@@ -36,6 +37,7 @@ const QRLinkGenerator = () => {
             const response = await axios.post("http://localhost:5000/text/generate", {
                 qrText,
                 email,
+                tag :QR_Name,
             });
 
             // Assuming the backend responds with the generated QR code URL
@@ -104,7 +106,7 @@ const QRLinkGenerator = () => {
                         Email
                     </button>
                 </div>
-                <div className="w-3/4 border-0 border-r-4 flex flex-col items-center bg-#3B3B3B; mt-4	">
+                <div className="w-3/4 border-0 border-r-4 flex flex-col items-center bg-white mt-4	">
                     <div className={styles.input_group}>
                         <input
                             type="text"
@@ -118,11 +120,24 @@ const QRLinkGenerator = () => {
                             Text
                         </label>
                     </div>
+                    <div className={styles.input_group}>
+                        <input
+                            type="text"
+                            className={styles.input}
+                            id="QR_Name"
+                            value={QR_Name}
+                            onChange={(e) => setQR_Name(e.target.value)}
+                            required
+                        />
+                        <label htmlFor="QR_Name" className={styles.user_label}>
+                            Tag
+                        </label>
+                    </div>
                     <button className={styles.button1} onClick={generateQr}>
                         Generate QR
                     </button>
                     <br/>
-                    <div className="mb-60">Text: {qrText}</div>
+                    
                     {qrImageUrl && <img src={qrImageUrl} alt="Generated QR Code"/>}
                 </div>
 

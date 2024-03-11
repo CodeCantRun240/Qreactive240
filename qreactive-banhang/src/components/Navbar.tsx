@@ -41,10 +41,10 @@ const Navbar = async () => {
                     <div className='ml-auto flex items-center pl-20'>
                             <div className='hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6'>
                             {user ? null : (
-                                <Link className="text-white rounded-xl bg-blue-500 w-20 h-6 content-center text-center 	"
+                                <Link className="text-white rounded-xl bg-blue-500 w-20 text-center 	"
                                 href='/sign-in'
                                 >
-                               <div className='mt-0.5'>Sign in</div> 
+                                Sign in
                                 </Link>
                             )}
 
@@ -58,10 +58,10 @@ const Navbar = async () => {
                             {user ? (
                                 <UserAccountNav user={user} />
                             ) : (
-                                <Link className="text-white rounded-xl text-center  w-36 h-6 bg-amber-300 "
+                                <Link className="text-white rounded-xl text-center w-36     bg-amber-300 "
                                 href='/sign-up'
                                 >
-                              <div className='mt-0.5' > Create account </div>
+                                Create account
                                 </Link>
                             )}
                             

@@ -29,7 +29,7 @@ export default function RootLayout({
         <main className='relative overflow-hidden '>
           <Providers>
             <Navbar />
-            <div className="h-full  mt-0 mb-0">
+            <div className="h-full  mt-0">
               <div className="w-screen">
                 {children}
               </div>

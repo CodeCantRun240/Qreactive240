@@ -1,9 +1,7 @@
 import styles from "./index.module.css";
-import MaxWidthWrapper from './MaxWidthWrapper'
 
 const Footer = () => {
   return (
-<MaxWidthWrapper>
     <div className={styles.footer}>
       <div className={styles.innerfooter}>
         <div className={styles.links}>
@@ -54,7 +52,6 @@ const Footer = () => {
         </div>
       </div>
     </div>
-    </MaxWidthWrapper>
   );
 };
 

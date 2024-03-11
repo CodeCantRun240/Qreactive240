@@ -152,7 +152,7 @@ const PersonalQRForm = () => {
             </button>
           </div>
 
-          <form className="w-3/4 border-0 border-r-4 flex flex-col items-center bg-#3B3B3B; border-b-2 min-h-screen mt-4 "
+          <form className="w-3/4 border-0 border-r-4 flex flex-col items-center bg-white border-b-2 min-h-screen mt-4 "
                 onSubmit={handleSubmit}>
             {formData.properties.map((property, index) => (
                 <div className="relative mb-3 ml-14 flex flex-row mt-5 content-center " key={index}>

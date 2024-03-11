@@ -64,48 +64,7 @@ const QRPersonalGenerator = () => {
                 </div>
             </div>
             <div className={styles.container}>
-            <div className="flex-row ">
-                    <button className={styles.button2} onClick={() => navigateToQRType("qr_link")}>
-
-                        <img src="/link.png" alt="Link Icon" className={styles.icon}/>
-                        Link
-                    </button>
-
-                    {/* Button to navigate to QR Text page */}
-                    <button className={styles.button2} onClick={() => navigateToQRType("qr_text")}>
-                        <img src="/text.png" alt="Text Icon" className={styles.icon}/>
-
-                        Text
-                    </button>
-
-                    {/* Button to navigate to QR Personal page */}
-                    <button className={styles.button2} onClick={() => navigateToQRType("qr_personal")}>
-                        <img src="/vcard.png" alt="Vcard Icon" className={styles.icon}/>
-
-                        Vcard
-                    </button>
-
-                    {/* Button to navigate to QR Personal Data */}
-                    <button className={styles.button2} onClick={() => navigateToQRType("personalData")}>
-                        <img src="/person.png" alt="Person Icon" className={styles.icon}/>
-
-                        Custom
-                    </button>
-
-                    {/* Button to navigate to QR List page */}
-                    <button className={styles.button2} onClick={() => navigateToQRType("qr_wifi")}>
-                        <img src="/wifi.png" alt="Wifi Icon" className={styles.icon}/>
-
-                        Wifi
-                    </button>
-                    <button className={styles.button2} onClick={() => navigateToQRType("qr_email")}>
-                        <img src="/mail.png" alt="Mail Icon" className={styles.icon}/>
-
-                        Email
-                    </button>
-
-                </div>
-                <div className="w-3/4 border-0 border-r-4 flex flex-col items-center bg-#3B3B3B;	">
+                <div className="w-3/4 border-0 border-r-4 flex flex-col items-center bg-white	">
                     <div className={styles.input_group}>
                         <input
                             type="email"
