@@ -9,8 +9,7 @@ const emailQRSchema = new mongoose.Schema({
     QRcode: String,
     Link: String,
     generatedAt:{ type: Date, default: Date.now },
-    type: { type: String, default: "email" },
-    tag: { type: String, default: null },
+    type: { type: String, default: "email" }
 });
 
 const EmailQR = mongoose.model('EmailQR', emailQRSchema);

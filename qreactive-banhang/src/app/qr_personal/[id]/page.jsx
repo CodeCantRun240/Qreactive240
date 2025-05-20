@@ -18,8 +18,6 @@ export default function UserProfile({params}) {
     const [website, setWebsite] = useState('');
     const [company, setCompany] = useState('');
     const [position, setPosition] = useState('');
-    const [tag, setTag] = useState('');
-    const [status, setStatus] = useState('private');
 
 
 
@@ -37,8 +35,7 @@ export default function UserProfile({params}) {
           setWebsite(response.data.website);
           setCompany(response.data.company);
           setPosition(response.data.position);
-            setTag(response.data.tag);
-            setStatus(response.data.status);
+
 
 
 
@@ -63,8 +60,6 @@ export default function UserProfile({params}) {
             address,
           company,
           position,
-            tag,
-            status,
         });
         console.log(response);
         router.push('/qr_list');
@@ -186,35 +181,6 @@ export default function UserProfile({params}) {
                 />
                 <label htmlFor="Company" className={styles.user_label}>
                     Company
-                </label>
-            </div>
-
-            <div className={styles.input_group}>
-                <input
-                    type="text"
-                    className={styles.input}
-                    id="Tag"
-                    value={tag}
-                    onChange={(e) => setTag(e.target.value)}
-                    required
-                />
-                <label htmlFor="Tag" className={styles.user_label}>
-                    Tag
-                </label>
-            </div>
-
-            <div className={styles.input_group}>
-                <select
-                    className={styles.input}
-                    id="status"
-                    value={status}
-                    onChange={(e) => setStatus(e.target.value)}
-                >
-                    <option>private</option>
-                    <option>public</option>
-                </select>
-                <label htmlFor="status" className={styles.user_label}>
-                    Status
                 </label>
             </div>
             <div className={styles.button}>

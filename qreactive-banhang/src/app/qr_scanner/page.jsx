@@ -102,7 +102,12 @@ function QRScanner() {
       </div>
     
 
-     
+      {selectedType && (
+        <div className={styles.container}>
+          <h2>You've selected {selectedType} QR code</h2>
+          {/* Additional content or QR code scanning component can be added here */}
+        </div>
+      )}
 
     <div classname = {styles.spacing}>
         

@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useQueryClient, QueryClientProvider, QueryClient } from 'react-query';
+import { useQueryClient, QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { useRouter } from "next/navigation";
 import styles from './styles.module.css';
 import { getEmailUser } from '@/components/emailuser';

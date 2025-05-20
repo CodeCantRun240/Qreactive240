@@ -13,7 +13,6 @@ const personalDataQRSchema = new mongoose.Schema({
     generatedAt: { type: Date, default: Date.now },
     type: { type: String, default: "personalData" },
     QRcode: String,
-    tag: { type: String, default: null },
 });
 const personalDataQR = mongoose.model('personalDataQR', personalDataQRSchema);
 

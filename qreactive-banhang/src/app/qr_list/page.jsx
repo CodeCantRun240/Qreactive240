@@ -263,7 +263,7 @@ function MyQRCodesContent() {
           <h2>My QR Codes</h2>
           <nav>
             <ol>
-             
+              <li>All QR codes /</li>
             </ol>
           </nav>
         </div>
@@ -309,10 +309,6 @@ function MyQRCodesContent() {
                 dropdown1Visible ? MyQR.show : ""
               }`}
             >
-              {/* Dropdown content */}
-              <a href="#" onClick={() => handleFilter(null)}>
-                All
-              </a>
                <a href="#" onClick={() => handleFilter("link")}>
                 Link
               </a>
@@ -363,7 +359,7 @@ function MyQRCodesContent() {
           
                     {qrCodes
               .filter((code) =>
-              (code.tag || '').toLowerCase().includes(searchQuery.toLowerCase())
+                code.Link.toLowerCase().includes(searchQuery.toLowerCase())
               )
               .filter((code) => !selectedFilter || code.type === selectedFilter)
               .map((code, index) => (
@@ -382,20 +378,13 @@ function MyQRCodesContent() {
                           htmlFor={MyQR.checkbox + index}
                           className={MyQR.checkboxLabel}
                         >
+                        Include in Selection
                       </label>
                   </div>
-                  <img src={code.QRcode} alt={code.name} style={{ width: '200px', height: '200px' }} />
+                  <img src={code.QRcode} alt={code.name} />
                     <div className={MyQR.qrCodeInfo}>
-                      <h3>{code.tag}</h3>
-                      {code.type === "personal" && <p>link: {code.Link}</p>}
-                      {code.type === "link" && <p>Link: {code.content}</p>}
-                      {code.type === "wifi" && <p>SSID: {code.name}</p>}
+                      <p>Link: {code.Link}</p>
                       <p>Type: {code.type}</p>
-                      
-                      {code.type === "text" && <p>Content: {code.content}</p>}
-                      
-                      {code.type === "wifi" && <p>Password: {code.password}</p>}
-                      {code.type === "personal" && <p>Status: {code.status}</p>}
                       <p>Created: {code.generatedAt}</p>
                     </div>
 

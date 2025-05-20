@@ -7,8 +7,7 @@ const textQRSchema = new mongoose.Schema({
     QRcode: String,
     Link: String,
     generatedAt:{ type: Date, default: Date.now },
-    type: { type: String, default: "text" },
-    tag: { type: String, default: null },
+    type: { type: String, default: "text" }
 });
 
 const TextQR = mongoose.model('TextQR', textQRSchema);
