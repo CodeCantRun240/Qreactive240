@@ -46,7 +46,7 @@ export const getQrClient = async ({
         cached.promise = payload.init({
             email:  {
                 transport: transporter ,
-                fromAddress: "onboarding@resend.com", //sau nay de ten mien vao
+                fromAddress: "noreply@sidescrollergame.online", //sau nay de ten mien vao
                 fromName: 'Qreactive',
             },
             secret: process.env.PAYLOAD_SERCRET,
